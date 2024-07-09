@@ -1,7 +1,7 @@
 // untuk konfigurasi database
 const {Sequelize} = require("sequelize");
 
-const sequelize = new Sequelize("database_gereja", "root", "170703Nathan", {
+const sequelize = new Sequelize("database_gereja", "root", "password", {
   host: "127.0.0.1",
   dialect: "mysql",
 });
