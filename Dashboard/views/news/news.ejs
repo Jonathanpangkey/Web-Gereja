@@ -1,0 +1,41 @@
+<div class="contents">
+  <div class="description">
+    <div class="content-container berita-list">
+      <h2>Daftar Berita</h2>
+      <div class="btn add-btn">
+        <a href="/berita/add">Tambah Berita</a>
+      </div>
+      <table id="berita-table">
+        <thead>
+          <tr>
+            <th>Judul</th>
+            <th>Isi</th>
+            <th>Tanggal</th>
+            <% if (user.role === 'bpmj') { %>
+            <th>Aksi</th>
+            <% } %>
+          </tr>
+        </thead>
+        <tbody>
+          <% beritaData.forEach((berita) => { %>
+          <tr>
+            <td><%= berita.judul %></td>
+            <td><%= berita.isi.length > 30 ? berita.isi.substring(0, 30) + '...' : berita.isi %></td>
+            <td><%= berita.tanggal %></td>
+            <% if (user.role === 'bpmj') { %>
+            <td>
+              <div class="btn-group">
+                <a href="/berita/edit/<%= berita.id %>" class="btn update-btn"><i class="fa-regular fa-pen-to-square"></i></a>
+                <form action="/berita/delete/<%= berita.id %>" method="POST" style="display: inline">
+                  <button type="submit" class="btn delete-btn"><i class="fa-solid fa-trash"></i></button>
+                </form>
+              </div>
+            </td>
+            <% } %>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

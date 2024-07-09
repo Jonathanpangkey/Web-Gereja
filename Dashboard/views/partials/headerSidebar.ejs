@@ -1,0 +1,143 @@
+<!--   *** Top Bar Starts ***   -->
+<div class="top-bar">
+  <div class="top-bar-left">
+    <div class="hamburger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="logo">
+      <img src="/images/logo.png" />
+    </div>
+  </div>
+
+  <div class="top-bar-right">
+    <div class="profile">
+      <img src="/images/profile-img.jpg" />
+    </div>
+  </div>
+</div>
+<!--   *** Top Bar Ends ***   -->
+
+<!--   === Side Bar Starts ===   -->
+<aside class="side-bar">
+  <!--   === Nav Bar Links Starts ===   -->
+  <span class="menu-label">MENU</span>
+  <ul class="navbar-links navbar-links-1">
+    <li class="<%= currentRoute === '/' ? 'active' : '' %>">
+      <a href="/">
+        <span class="nav-icon">
+          <i class="fa-solid fa-chart-line"></i>
+        </span>
+        <span class="nav-text">Beranda</span>
+      </a>
+    </li>
+    <li class="<%= currentRoute === '/pemasukkan' ? 'active' : '' %>">
+      <a href="/pemasukkan">
+        <span class="nav-icon">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+        </span>
+        <span class="nav-text">Pemasukkan</span>
+      </a>
+    </li>
+    <li class="<%= currentRoute === '/pengeluaran' ? 'active' : '' %>">
+      <a href="/pengeluaran">
+        <span class="nav-icon">
+          <i class="fa-solid fa-sack-dollar"></i>
+        </span>
+        <span class="nav-text">Pengeluaran</span>
+      </a>
+    </li>
+    <% if (user.role !== 'bipra') { %>
+    <li class="<%= currentRoute === '/jadwal' ? 'active' : '' %>">
+      <a href="/jadwal">
+        <span class="nav-icon">
+          <i class="fa-solid fa-calendar-check"></i>
+        </span>
+        <span class="nav-text">Jadwal</span>
+      </a>
+    </li>
+    <li class="<%= currentRoute === '/berita' ? 'active' : '' %>">
+      <a href="/berita">
+        <span class="nav-icon">
+          <i class="fa-solid fa-user"></i>
+        </span>
+        <span class="nav-text">Berita</span>
+      </a>
+    </li>
+    <li class="<%= currentRoute === '/kolom' ? 'active' : '' %>">
+      <a href="/kolom">
+        <span class="nav-icon">
+          <i class="fa-solid fa-people-group"></i>
+        </span>
+        <span class="nav-text">Kolom</span>
+      </a>
+    </li>
+    <li class="<%= currentRoute === '/kategori' ? 'active' : '' %>">
+      <a href="/kategori">
+        <span class="nav-icon">
+          <i class="fa-solid fa-layer-group"></i>
+        </span>
+        <span class="nav-text">Kategori</span>
+      </a>
+    </li>
+    <li class="<%= currentRoute === '/user' ? 'active' : '' %>">
+      <a href="/user">
+        <span class="nav-icon">
+          <i class="fa-solid fa-users"></i>
+        </span>
+        <span class="nav-text">Users</span>
+      </a>
+    </li>
+    <% } %>
+  </ul>
+  <span class="line"></span>
+  <span class="menu-label">PREFERENCES</span>
+  <ul class="navbar-links navbar-links-2">
+    <li>
+      <a href="#">
+        <span class="nav-icon">
+          <i class="fa-solid fa-file"></i>
+        </span>
+        <span class="nav-text">Portfolio</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="nav-icon">
+          <i class="fa-solid fa-pen"></i>
+        </span>
+        <span class="nav-text">History</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="nav-icon">
+          <i class="fa-solid fa-users"></i>
+        </span>
+        <span class="nav-text">People & Teams</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="nav-icon">
+          <i class="fa-solid fa-question"></i>
+        </span>
+        <span class="nav-text">Help & Center</span>
+      </a>
+    </li>
+  </ul>
+  <!--   === Nav Bar Links Ends ===   -->
+  <!--   === Side Bar Footer Starts ===   -->
+  <div class="sidebar-footer">
+    <a href="/logout" class="logoutBtn">
+      <span class="logout-icon">
+        <i class="fa-solid fa-right-from-bracket"></i>
+      </span>
+      <span class="text">Logout</span>
+    </a>
+  </div>
+  <!--   === Side Bar Footer Ends ===   -->
+</aside>
+<!--   === Side Bar Ends ===   -->
+<!--   === Contents Section Starts ===   -->

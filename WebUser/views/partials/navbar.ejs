@@ -1,0 +1,24 @@
+<!-- Header -->
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex align-items-center">
+    <div class="logo me-auto">
+      <h1>
+        <a href="/">
+          <img src="/assets/img/gmim.png" alt="Logo" style="height: 40px" />
+        </a>
+      </h1>
+    </div>
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="nav-link scrollto <%= currentRoute === '/' ? 'active' : '' %>" href="/">Beranda</a></li>
+        <li><a class="nav-link scrollto <%= currentRoute === '/keuangan' ? 'active' : '' %>" href="/keuangan">Keuangan</a></li>
+        <li><a class="nav-link scrollto <%= currentRoute === '/jadwal' ? 'active' : '' %>" href="/jadwal">Jadwal Ibadah</a></li>
+        <li><a class="nav-link scrollto <%= currentRoute === '/renungan' ? 'active' : '' %>" href="/renungan">Renungan</a></li>
+        <li><a class="nav-link scrollto <%= currentRoute === '/kontak' ? 'active' : '' %>" href="/kontak">Kontak</a></li>
+        <li><a class="nav-link scrollto" href="http://localhost:3000/login">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- End Header -->

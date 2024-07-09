@@ -1,0 +1,60 @@
+<div class="contents">
+  <div class="description">
+    <div class="content-container">
+      <h2>Tambah Pemasukkan</h2>
+      <form action="/pemasukkan/add" method="POST" enctype="multipart/form-data">
+        <div>
+          <label for="kolok">Kolom:</label>
+          <select name="kolom" id="kolom">
+            <!-- looping data kolom -->
+            <% kolomData.forEach(kolom => { %>
+            <option value="<%= kolom.name %>"><%= kolom.name %></option>
+            <% }) %>
+          </select>
+        </div>
+        <div>
+          <label for="nominal">Nominal:</label>
+          <input type="text" id="nominal" name="nominal" required />
+        </div>
+        <div>
+          <label for="nama_jemaat">Jemaat:</label>
+          <input type="text" id="nama_jemaat" name="nama_jemaat" required />
+        </div>
+        <div>
+          <label for="kategori">Kategori:</label>
+          <select name="kategori" id="kategori">
+            <!-- looping data kategori-->
+            <% kategoriData.filter(kategori => kategori.type === 'Pemasukkan').forEach(kategori => { %>
+            <option value="<%= kategori.name %>"><%= kategori.name %></option>
+            <% }) %>
+          </select>
+        </div>
+        <div>
+          <label for="bukti_transaksi">Bukti Transaksi:</label>
+          <div class="bukti-group">
+            <input type="text" id="bukti_transaksi_display" placeholder="No file chosen" readonly />
+            <input type="file" id="bukti_transaksi" name="bukti_transaksi" style="display: none" />
+            <button type="button" class="btn" onclick="document.getElementById('bukti_transaksi').click();">Pilih File</button>
+          </div>
+        </div>
+        <div>
+          <label for="tanggal">Tanggal:</label>
+          <input type="date" id="tanggal" name="tanggal" required />
+        </div>
+        <div>
+          <label for="keterangan">Keterangan:</label>
+          <textarea id="keterangan" name="keterangan"></textarea>
+        </div>
+        <button type="submit" class="btn">Tambah</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- handle tampilan input file sesuai dengan file yang dipilih -->
+<script>
+  document.getElementById("bukti_transaksi").addEventListener("change", function () {
+    var fileName = this.files[0] ? this.files[0].name : "No file chosen";
+    document.getElementById("bukti_transaksi_display").value = fileName;
+  });
+</script>

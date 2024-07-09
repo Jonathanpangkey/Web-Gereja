@@ -1,0 +1,21 @@
+<div class="contents">
+    <div class="description">
+      <h2>Edit Berita</h2>
+      <form action="/berita/edit/<%= berita.id %>" method="POST">
+        <div>
+          <label for="judul">Judul:</label>
+          <input type="text" id="judul" name="judul" value="<%= berita.judul %>" required />
+        </div>
+        <div>
+          <label for="isi">Isi:</label>
+          <textarea id="isi" name="isi"><%= berita.isi %></textarea>
+        </div>
+        <div>
+          <label for="tanggal">Tanggal:</label>
+          <input type="date" id="tanggal" name="tanggal" value="<%= berita.tanggal %>" required />
+        </div>
+        <button type="submit" class="btn submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+  

@@ -1,0 +1,17 @@
+<div class="container py-5">
+  <h1 class="mb-4 text-center py-2">Renungan dan Berita</h1>
+  <div class="row d-flex flex-column align-items-center justify-content-center">
+    <% beritas.forEach(berita => { %>
+    <div class="col-10 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= berita.judul %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= new Date(berita.tanggal).toLocaleDateString() %></h6>
+          <p class="card-text"><%= berita.isi.length > 20 ? berita.isi.substring(0, 20) + '...' : berita.isi %></p>
+          <a href="/renungan/<%= berita.id %>" class="card-link">Read more</a>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>

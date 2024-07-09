@@ -1,0 +1,35 @@
+<div class="contents">
+  <div class="description">
+    <div class="content-container kolom">
+      <h2>List of Kolom</h2>
+      <div class="btn add-btn">
+        <a href="/kolom/add">Tambah Kolom</a>
+      </div>
+      <table id="kolom-table">
+        <thead>
+          <tr>
+            <th>Kolom Name</th>
+            <% if (user.role === 'bpmj') { %>
+            <th>Aksi</th>
+            <% } %>
+          </tr>
+        </thead>
+        <tbody>
+          <% kolomData.forEach((kolom) => { %>
+          <tr>
+            <td><%= kolom.name %></td>
+            <% if (user.role === 'bpmj') { %>
+            <td>
+              <a href="/kolom/edit/<%= kolom.id %>" class="btn update-btn">Edit</a>
+              <form action="/kolom/delete/<%= kolom.id %>" method="POST" style="display: inline">
+                <button type="submit" class="btn delete-btn">Delete</button>
+              </form>
+            </td>
+            <% } %>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

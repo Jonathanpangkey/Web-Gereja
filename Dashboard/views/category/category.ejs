@@ -1,0 +1,37 @@
+<div class="contents">
+  <div class="description">
+    <div class="content-container kategori">
+      <h2>List of Kategori</h2>
+      <div class="btn add-btn">
+        <a href="/kategori/add">Tambah Kategori</a>
+      </div>
+      <table id="kategori-table">
+        <thead>
+          <tr>
+            <th>Kategori Name</th>
+            <th>Jenis</th>
+            <% if (user.role === 'bpmj') { %>
+            <th>Aksi</th>
+            <% } %>
+          </tr>
+        </thead>
+        <tbody>
+          <% kategoriData.forEach((kategori) => { %>
+          <tr>
+            <td><%= kategori.name %></td>
+            <td><%= kategori.type %></td>
+            <% if (user.role === 'bpmj') { %>
+            <td>
+              <a href="/kategori/edit/<%= kategori.id %>" class="btn update-btn">Edit</a>
+              <form action="/kategori/delete/<%= kategori.id %>" method="POST" style="display: inline">
+                <button type="submit" class="btn delete-btn">Delete</button>
+              </form>
+            </td>
+            <% } %>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

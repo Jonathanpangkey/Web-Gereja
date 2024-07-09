@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Express Dashboard</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!-- jsPDF untuk pembuatan PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- CSS untuk formulir -->
+    <link rel="stylesheet" href="/css/form.css" />
+    <% if (typeof dashboardCss !== 'undefined' && dashboardCss) { %>
+    <!-- CSS spesifik Dashboard dan Chart.js -->
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <% } %>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- Sertakan header dan sidebar jika showHeader bernilai true -->
+      <% if (typeof showHeader !== 'undefined' && showHeader) { %> <%- include('partials/headerSidebar') %> <% } %>
+      <!-- Konten utama -->
+      <div><%- body %></div>
+    </div>
+  </body>
+</html>

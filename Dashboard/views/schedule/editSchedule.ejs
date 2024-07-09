@@ -1,0 +1,29 @@
+<div class="contents">
+  <div class="description">
+    <h2>Edit Jadwal Ibadah</h2>
+    <form action="/jadwal/edit/<%= jadwal.id %>" method="POST">
+      <div>
+        <label for="tempat_ibadah">Tempat Ibadah:</label>
+        <input type="text" id="tempat_ibadah" name="tempat_ibadah" value="<%= jadwal.tempat_ibadah %>" required />
+      </div>
+      <div>
+        <label for="kolom">Kolom:</label>
+        <select name="kolom" id="kolom">
+            <!-- looping data kolom -->
+          <% kolomData.forEach(kolom => { %>
+          <option value="<%= kolom.name %>" <%= jadwal.kolom === kolom.name ? 'selected' : '' %>><%= kolom.name %></option>
+          <% }) %>
+        </select>
+      </div>
+      <div>
+        <label for="pemimpin_ibadah">Pemimpin Ibadah:</label>
+        <input type="text" id="pemimpin_ibadah" name="pemimpin_ibadah" value="<%= jadwal.pemimpin_ibadah %>" />
+      </div>
+      <div>
+        <label for="tanggal">Tanggal:</label>
+        <input type="date" id="tanggal" name="tanggal" value="<%= jadwal.tanggal %>" required />
+      </div>
+      <button type="submit" class="btn login-btn">Submit</button>
+    </form>
+  </div>
+</div>

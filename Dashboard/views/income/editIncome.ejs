@@ -1,0 +1,59 @@
+<div class="contents">
+  <div class="description">
+    <h2>Edit Pemasukkan</h2>
+    <form action="/pemasukkan/edit/<%= income.id %>" method="POST" enctype="multipart/form-data">
+      <div>
+        <label for="kolom">Kolom:</label>
+        <select name="kolom" id="kolom">
+          <!-- looping data kolom -->
+          <% kolomData.forEach(kolom => { %>
+          <option value="<%= kolom.name %>" <%= income.kolom === kolom.name ? 'selected' : '' %>><%= kolom.name %></option>
+          <% }) %>
+        </select>
+      </div>
+      <div>
+        <label for="nominal">Nominal:</label>
+        <input type="text" id="nominal" name="nominal" value="<%= income.nominal %>" required />
+      </div>
+      <div>
+        <label for="nama_jemaat">Jemaat:</label>
+        <input type="text" id="nama_jemaat" name="nama_jemaat" value="<%= income.nama_jemaat %>" required />
+      </div>
+      <div>
+        <label for="kategori">Kategori:</label>
+        <select name="kategori" id="kategori">
+          <!-- looping data kategori-->
+          <% kategoriData.filter(kategori => kategori.type === 'Pemasukkan').forEach(kategori => { %>
+          <option value="<%= kategori.name %>" <%= income.kategori === kategori.name ? 'selected' : '' %>><%= kategori.name %></option>
+          <% }) %>
+        </select>
+      </div>
+      <div>
+        <label for="bukti_transaksi">Bukti Transaksi:</label>
+        <div class="bukti-group">
+          <!-- logika tampilan text file sesuai dengan file yang dipilih -->
+          <% if (income.bukti_transaksi) { %>
+            <input class="left" type="text" id="bukti_transaksi_existing" value="<%= income.bukti_transaksi %>" readonly />
+          <% } else { %>
+            <input type="text" id="bukti_transaksi_existing" placeholder="No file chosen" readonly />
+          <% } %>
+          <input type="file" id="bukti_transaksi" name="bukti_transaksi" style="display:none;" />
+          <button class="right btn" type="button" onclick="document.getElementById('bukti_transaksi').click();">Pilih File</button>
+        </div>
+      </div>
+      <div>
+        <label for="keterangan">Keterangan:</label>
+        <textarea id="keterangan" name="keterangan"><%= income.keterangan %></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- handle tampilan input file sesuai dengan file yang dipilih -->
+<script>
+   document.getElementById('bukti_transaksi').addEventListener('change', function() {
+    var fileName = this.files[0] ? this.files[0].name : "No file chosen";
+    document.getElementById('bukti_transaksi_existing').value = fileName;
+  });
+</script>

@@ -1,0 +1,15 @@
+<div class="contents">
+    <div class="description">
+      <div class="content-container edit-kolom">
+        <h2>Edit Kolom</h2>
+        <form action="/kolom/edit/<%= kolom.id %>" method="POST">
+          <div class="form-group">
+            <label for="name">Kolom Name:</label>
+            <input type="text" id="name" name="name" value="<%= kolom.name %>" required>
+          </div>
+          <button type="submit" class="btn submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

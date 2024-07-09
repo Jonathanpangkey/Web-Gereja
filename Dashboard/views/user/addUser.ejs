@@ -1,0 +1,30 @@
+<div class="contents">
+  <div class="description">
+    <div class="content-container add-user">
+      <h2>Add User</h2>
+      <form action="/user/add" method="POST">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <div class="password-wrapper">
+            <input type="password" id="password" name="password" required />
+            <span id="togglePassword" class="toggle-password">Show</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="role">Role:</label>
+          <select id="role" name="role" required>
+            <option value="bipra">BIPRA</option>
+            <option value="bpmj">BPMJ</option>
+          </select>
+        </div>
+        <button type="submit" class="btn submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/toggle.js"></script>

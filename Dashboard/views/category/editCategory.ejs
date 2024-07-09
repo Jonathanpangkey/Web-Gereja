@@ -1,0 +1,21 @@
+<div class="contents">
+  <div class="description">
+    <div class="content-container edit-kategori">
+      <h2>Edit Kategori</h2>
+      <form action="/kategori/edit/<%= kategori.id %>" method="POST">
+        <div class="form-group">
+          <label for="name">Kategori Name:</label>
+          <input type="text" id="name" name="name" value="<%= kategori.name %>" required />
+        </div>
+        <div class="form-group">
+          <label for="type">Kategori Type:</label>
+          <select id="type" name="type" required>
+            <option value="pemasukkan" <%= kategori.type === 'pemasukkan' ? 'selected' : '' %>>Pemasukkan</option>
+            <option value="pengeluaran" <%= kategori.type === 'pengeluaran' ? 'selected' : '' %>>Pengeluaran</option>
+          </select>
+        </div>
+        <button type="submit" class="btn submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<!-- Bagian Konten Dimulai -->
+<div class="contents">
+  <div class="description">
+    <div class="content-container">
+      <h3 class="table-heading">Pengeluaran</h3>
+      <div class="btn add-btn" id="add-expense">
+        <a href="/pengeluaran/add">Tambah data</a>
+      </div>
+      <table id="expense-table">
+        <thead>
+          <tr>
+            <th>Kolom</th>
+            <th>Nominal</th>
+            <th>Kategori</th>
+            <th>Tanggal</th>
+            <th>Bukti Transaksi</th>
+            <th>Keterangan</th>
+            <% if (user.role === 'bpmj') { %>
+            <th>Aksi</th>
+            <% } %>
+          </tr>
+        </thead>
+        <tbody>
+          <% expenseData.forEach((expense, index) => { %>
+          <tr>
+            <td><%= expense.kolom %></td>
+            <td><%= expense.nominal %></td>
+            <td><%= expense.kategori %></td>
+            <td><%= expense.tanggal %></td>
+            <td>
+              <button class="lihat-btn" onclick="openModal('uploads/<%= expense.bukti_transaksi %>')">Lihat Foto</button>
+            </td>
+            <td><%= expense.keterangan %></td>
+            <% if (user.role === 'bpmj') { %>
+            <td>
+              <div class="btn-group">
+                <a href="/pengeluaran/edit/<%= expense.id %>" class="btn update-btn">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </a>
+                <form action="/pengeluaran/delete/<%= expense.id %>" method="POST" style="display: inline">
+                  <button type="submit" class="btn delete-btn">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </form>
+              </div>
+            </td>
+            <% } %>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Bagian Konten Berakhir -->
+
+<!-- Modal untuk Bukti Transaksi -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="Bukti Transaksi" style="width: 100%" />
+  </div>
+</div>
+
+<script type="text/javascript" src="js/dashboard.js"></script>
+<script type="text/javascript" src="js/table.js"></script>

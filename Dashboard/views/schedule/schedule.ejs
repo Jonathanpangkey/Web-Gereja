@@ -1,0 +1,43 @@
+<div class="contents">
+  <div class="description">
+    <div class="content-container schedules">
+      <h2>Jadwal Ibadah</h2>
+      <div class="btn add-btn">
+        <a href="/jadwal/add">Tambah Jadwal</a>
+      </div>
+      <table id="jadwal-table">
+        <thead>
+          <tr>
+            <th>Tempat Ibadah</th>
+            <th>Kolom</th>
+            <th>Pemimpin Ibadah</th>
+            <th>Tanggal</th>
+            <% if (user.role === 'bpmj') { %>
+            <th>Aksi</th>
+            <% } %>
+          </tr>
+        </thead>
+        <tbody>
+          <% jadwalData.forEach((jadwal) => { %>
+          <tr>
+            <td><%= jadwal.tempat_ibadah %></td>
+            <td><%= jadwal.kolom %></td>
+            <td><%= jadwal.pemimpin_ibadah %></td>
+            <td><%= jadwal.tanggal %></td>
+            <% if (user.role === 'bpmj') { %>
+            <td>
+              <div class="btn-group">
+                <a href="/jadwal/edit/<%= jadwal.id %>" class="btn update-btn"><i class="fa-regular fa-pen-to-square"></i></a>
+                <form action="/jadwal/delete/<%= jadwal.id %>" method="POST" style="display: inline">
+                  <button type="submit" class="btn delete-btn"><i class="fa-solid fa-trash"></i></button>
+                </form>
+              </div>
+            </td>
+            <% } %>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

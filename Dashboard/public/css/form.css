@@ -1,0 +1,117 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* login */
+.form {
+  padding: 2rem 9rem;
+  margin: auto;
+  justify-content: space-around;
+  gap: 1rem;
+  align-items: center;
+  display: flex;
+  margin-top: 10rem;
+}
+
+.form-left,
+.form-right {
+  width: 40%;
+  text-align: center;
+}
+
+.form-right img {
+  width: 100%;
+}
+
+form {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+form input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid rgb(207, 207, 207);
+  background-color: white;
+  outline: none;
+  border-radius: 4px;
+}
+
+form input:focus {
+  outline: 1px solid #0ba5e1;
+}
+
+.btn {
+  padding: 10px 17px;
+  background-color: #0ba5e1;
+  color: white;
+  width: fit-content;
+  border: none;
+  font-size: 14px;
+}
+
+.login-btn {
+  align-self: center;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.bukti-group {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.bukti-group .btn {
+  margin-top: 5px;
+  outline: none;
+  font-size: 10px;
+  padding: 5px;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input[type="password"],
+.password-wrapper input[type="text"] {
+  width: 100%;
+  padding-right: 60px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+@media (max-width: 800px) {
+  .form {
+    flex-direction: column-reverse;
+    gap: 3rem;
+    padding: 0rem 5rem;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+  }
+
+  .form-left,
+  .form-right {
+    width: 100%;
+  }
+}

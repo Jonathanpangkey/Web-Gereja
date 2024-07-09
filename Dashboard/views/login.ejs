@@ -1,0 +1,21 @@
+<!-- menampilkan pesan error jika ada -->
+<% if (errors.length > 0) { %>
+<ul>
+  <% errors.forEach(error => { %>
+  <li><%= error.msg %></li>
+  <% }) %>
+</ul>
+<% } %>
+<div class="form">
+  <div class="form-left">
+    <h2>Halo, selamat datang kembali ! </h2>
+    <form action="/login" method="POST">
+      <input type="text" name="username" id="username" placeholder="silahkan masukan username" required />
+      <input type="password" name="password" placeholder="silahkan masukan password" id="password" required />
+      <button class="btn login-btn" type="submit">Login</button>
+    </form>
+  </div>
+  <div class="form-right">
+    <img src="/images/login.svg" alt="">
+  </div>
+</div>

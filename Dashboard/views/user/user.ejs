@@ -1,0 +1,35 @@
+<div class="contents">
+  <div class="description">
+    <div class="content-container user">
+      <h2>List of Users</h2>
+      <div class="btn add-btn">
+        <a href="/user/add">Add User</a>
+      </div>
+      <table id="user-table">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Password</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% users.forEach((user) => { %>
+          <tr>
+            <td><%= user.username %></td>
+            <td><%= user.role %></td>
+            <td><%= user.password %></td>
+            <td>
+              <a href="/user/edit/<%= user.id %>" class="btn update-btn">Edit</a>
+              <form action="/user/delete/<%= user.id %>" method="POST" style="display: inline">
+                <button type="submit" class="btn delete-btn">Delete</button>
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
