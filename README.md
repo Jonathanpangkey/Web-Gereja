@@ -6,6 +6,7 @@
 
 ### Instalasi
 - clone : `git clone https://github.com/Jonathanpangkey/Web-Gereja.git`
+- Buat Database `database_gereja`
 #### Di masing-masing aplikasi (Dashboard, WebUser) : 
 - Navigasikan ke direktori  :
 	- `cd Dashboard` untuk dashboard
