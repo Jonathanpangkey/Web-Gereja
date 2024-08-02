@@ -1,4 +1,21 @@
 # Web Gereja
+Website managemen gereja. Proyek ini terdiri dari dua bagian utama:
+
+1. **Web Dashboard**: 
+   - **Fungsi**: Untuk pengelolaan data gereja, termasuk pengeluaran, pendapatan, kolom (kelompok gereja), kategori, berita, dan jadwal.
+   - **Fitur**:
+     - **Pengeluaran & Pendapatan**: Menambahkan, mengedit, dan menghapus data pengeluaran dan pendapatan. Data kolom dan kategori diinput melalui form dan ditampilkan sebagai dropdown dinamis.
+     - **Kolom & Kategori**: Menambah, mengedit, dan menghapus kolom serta kategori yang digunakan dalam form input.
+     - **Berita**: Menambahkan, mengedit, dan menghapus berita yang akan dipublikasikan.
+     - **Jadwal**: Mengelola jadwal kegiatan gereja.
+     - **Import Laporan Keuangan**: Mengimpor laporan keuangan bulanan dalam format PDF.
+
+2. **Web User**:
+   - **Fungsi**: Menyediakan landing page sederhana dan informasi yang dipublikasikan dari Web Dashboard.
+   - **Fitur**:
+     - **Landing Page**: Menampilkan informasi penting untuk jemaat.
+     - **Informasi Publikasi**: Menampilkan berita dan data penting yang diambil dari Web Dashboard.
+     - **Import Laporan Keuangan**: Opsi untuk mengimpor laporan keuangan.
 
 ### Requirements
 - Node Js (NPM)
