@@ -1,5 +1,5 @@
 # Web Gereja
-Website managemen gereja. Proyek ini terdiri dari dua bagian utama:
+Website manajemen gereja. Proyek ini terdiri dari dua bagian utama:
 
 1. **Web Dashboard**: 
    - **Fungsi**: Untuk pengelolaan data gereja, termasuk pengeluaran, pendapatan, kolom (kelompok gereja), kategori, berita, dan jadwal.
