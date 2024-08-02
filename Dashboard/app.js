@@ -53,7 +53,7 @@ sequelize
           password: "thisisbpmj123", 
           role: "bpmj",
           kolom: "All",
-        },
+        }, // kredensial contoh, bisa diganti
       ],
       {
         ignoreDuplicates: true, // Abaikan duplikasi jika entri sudah ada
