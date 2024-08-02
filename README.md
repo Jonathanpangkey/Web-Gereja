@@ -13,8 +13,8 @@ Website manajemen gereja. Proyek ini terdiri dari dua bagian utama:
 2. **Web User**:
    - **Fungsi**: Menyediakan landing page sederhana dan informasi yang dipublikasikan dari Web Dashboard.
    - **Fitur**:
-     - **Landing Page**: Menampilkan informasi penting untuk jemaat.
-     - **Informasi Publikasi**: Menampilkan berita dan data penting yang diambil dari Web Dashboard.
+     - **Landing Page**: Menampilkan informasi gereja untuk jemaat.
+     - **Informasi Publikasi**: Menampilkan berita dan data publikasi yang diambil dari Web Dashboard.
      - **Import Laporan Keuangan**: Opsi untuk mengimpor laporan keuangan.
 
 ### Requirements
