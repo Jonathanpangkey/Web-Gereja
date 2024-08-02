@@ -7,7 +7,7 @@ Website managemen gereja. Proyek ini terdiri dari dua bagian utama:
      - **Pengeluaran & Pendapatan**: Menambahkan, mengedit, dan menghapus data pengeluaran dan pendapatan. Data kolom dan kategori diinput melalui form dan ditampilkan sebagai dropdown dinamis.
      - **Kolom & Kategori**: Menambah, mengedit, dan menghapus kolom serta kategori yang digunakan dalam form input.
      - **Berita**: Menambahkan, mengedit, dan menghapus berita yang akan dipublikasikan.
-     - **Jadwal**: Mengelola jadwal kegiatan gereja.
+     - **Jadwal**: Menambahkan, mengedit, dan menghapus jadwal kegiatan gereja.
      - **Import Laporan Keuangan**: Mengimpor laporan keuangan bulanan dalam format PDF.
 
 2. **Web User**:
