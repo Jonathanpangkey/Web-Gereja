@@ -1,5 +1,5 @@
 # Web Gereja
-Website manajemen gereja. Proyek ini terdiri dari dua bagian utama:
+Website manajemen gereja dibuat dengan expressjs sebagai server side language dengan template engine ejs untuk membuat tampilan interface dan mysql sebagai database. Proyek ini terdiri dari dua bagian utama:
 
 1. **Web Dashboard**: 
    - **Fungsi**: Untuk pengelolaan data gereja, termasuk pengeluaran, pendapatan, kolom (kelompok gereja), kategori, berita, dan jadwal.
