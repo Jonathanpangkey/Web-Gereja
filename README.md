@@ -1,6 +1,6 @@
 # Web Gereja
 
-<img width="1440" alt="Screenshot 2025-04-22 at 15 59 17" src="https://github.com/user-attachments/assets/620ca0e8-d4a9-4f11-8ba8-902598f6de42" />
+<img width="1436" alt="Screenshot 2025-04-22 at 16 02 09" src="https://github.com/user-attachments/assets/261bc66f-f439-4dc4-8982-a30f901d1f5d" />
 
 Website manajemen gereja dibuat dengan expressjs sebagai server side language dengan template engine ejs untuk membuat tampilan interface dan mysql sebagai database. Proyek ini terdiri dari dua bagian utama:
 1. **Web Dashboard**: 
